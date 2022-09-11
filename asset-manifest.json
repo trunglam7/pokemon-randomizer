@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pokemon-randomizer/static/css/main.78acc864.css",
+    "main.js": "/pokemon-randomizer/static/js/main.67ab666d.js",
+    "static/media/poke-logo.png": "/pokemon-randomizer/static/media/poke-logo.039672fd7aea39034a2b.png",
+    "static/media/poke-placeholder.png": "/pokemon-randomizer/static/media/poke-placeholder.37757a56a6e58977a698.png",
+    "index.html": "/pokemon-randomizer/index.html",
+    "main.78acc864.css.map": "/pokemon-randomizer/static/css/main.78acc864.css.map",
+    "main.67ab666d.js.map": "/pokemon-randomizer/static/js/main.67ab666d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.78acc864.css",
+    "static/js/main.67ab666d.js"
+  ]
+}
