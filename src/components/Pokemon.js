@@ -59,7 +59,8 @@ const Pokemon = ( { url } ) => {
                 name: res.data.name.toUpperCase(),
                 sprite: res.data.sprites.front_default,
                 types: res.data.types.map(x => x.type.name.toUpperCase()),
-                abilities: res.data.abilities.map(x => x.ability.name.toUpperCase())
+                abilities: res.data.abilities.map(x => x.ability.name.toUpperCase()),
+                moves: res.data.moves.map(x => x.move.name.toUpperCase())
             })
         }).catch((err) => {
             console.log(err)
@@ -75,6 +76,9 @@ const Pokemon = ( { url } ) => {
 
     if (!pokemon) return null
     if (!pokemon.types) return null
+
+    const shuffleMoves = [...pokemon.moves].sort(() => 0.5 - Math.random())
+    const shuffleMoveList = shuffleMoves.slice(0, 4)
 
     return (
         <div className='poke-card' style={{
@@ -102,6 +106,13 @@ const Pokemon = ( { url } ) => {
                         <div>{pokemon.abilities[0]}</div>
                         <div>{pokemon.abilities[1]}</div>
                         <div>{pokemon.abilities[2]}</div>
+                    </div>
+                    <div className='poke-abilities'>
+                        <div className='ability-title'>Moves:</div>
+                        <div>{shuffleMoveList[0]}</div>
+                        <div>{shuffleMoveList[1]}</div>
+                        <div>{shuffleMoveList[2]}</div>
+                        <div>{shuffleMoveList[3]}</div>
                     </div>
                 </div>
             </div>
