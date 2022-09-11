@@ -1,0 +1,38 @@
+.header-container{
+    width: 100%;
+    min-height: 100px;
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.poke-logo{
+    width: 500px;
+}
+
+.button-container{
+    margin-top: 10px;
+    display: flex;
+    column-gap: 10px;
+}
+
+.button-container button{
+    font-weight: bold;
+    font-family: 'Grandstander', sans-serif;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 560px) {
+    .poke-logo{
+        width: 250px;
+    }
+
+    .button-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
